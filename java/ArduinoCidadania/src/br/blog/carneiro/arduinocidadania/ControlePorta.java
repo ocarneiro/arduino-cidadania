@@ -73,34 +73,58 @@ public class ControlePorta {
     /**
      * @param opcao - Valor a ser enviado pela porta serial
      */
-    public void enviaDados(short valor) {
+    public void enviaDado(short valor) {
         
         try {
-            short valorConsiderado = valor;
-            if (valor > 999) {
-                valorConsiderado = 999;
-            } else if (valor < 0) {
-                valorConsiderado = 0;
-            }
-            int centena = (valorConsiderado / 100);
-            int dezena = ((valorConsiderado - centena * 100) / 10);
-            int inteiro = (valorConsiderado - centena * 100 - dezena * 10);
-
-            String valorString = "" + centena + dezena + inteiro;
-            System.out.println("Mandei: " + valorString);
+            String valorString = geraValorStringParaEnvio(valor);
+            System.out.println("Mandando: " + valorString);
             serialOut.write(valorString.getBytes());
-
-            /*
-            System.out.println ("Recebi: " + serialIn.available() + " bytes");
-            while (serialIn.available()>0) {
-                System.out.print((char)serialIn.read());
-            }
-            System.out.println(".");
-            */
 
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "Não foi possível enviar o dado. ",
                     "Enviar dados", JOptionPane.PLAIN_MESSAGE);
         }
+    }
+
+        /**
+     * @param opcao - Valor a ser enviado pela porta serial
+     */
+    public void enviaDados(short[] valores) {
+        
+        try {
+            String stringAEnviar = "";
+            for (short valorAtual: valores){
+                stringAEnviar += geraValorStringParaEnvio(valorAtual) + ",";
+            }
+            System.out.println("Mandando: " + stringAEnviar);
+            serialOut.write(stringAEnviar.getBytes());
+
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null, "Não foi possível enviar o dado. ",
+                    "Enviar dados", JOptionPane.PLAIN_MESSAGE);
+        }
+    }
+
+    
+    private void recebeSerialInput() throws IOException {
+        System.out.println ("Recebi: " + serialIn.available() + " bytes");
+        while (serialIn.available()>0) {
+            System.out.print((char)serialIn.read());
+        }
+        System.out.println(".");
+    }
+
+    private String geraValorStringParaEnvio(short valor) {
+        short valorConsiderado = valor;
+        if (valor > 999) {
+            valorConsiderado = 999;
+        } else if (valor < 0) {
+            valorConsiderado = 0;
+        }
+        int centena = (valorConsiderado / 100);
+        int dezena = ((valorConsiderado - centena * 100) / 10);
+        int inteiro = (valorConsiderado - centena * 100 - dezena * 10);
+        String valorString = "" + centena + dezena + inteiro;
+        return valorString;
     }
 }

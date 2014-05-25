@@ -33,11 +33,12 @@
           <Group type="102" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       <Component id="jBSair" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="jBLedDesligar" alignment="0" max="32767" attributes="0"/>
                           <Component id="jB10porcento" pref="61" max="32767" attributes="0"/>
@@ -54,10 +55,11 @@
                           <Component id="jB80porcento" max="32767" attributes="0"/>
                           <Component id="jB90porcento" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="0" pref="240" max="32767" attributes="0"/>
+                      <EmptySpace pref="94" max="32767" attributes="0"/>
+                      <Component id="jBSorteio" min="-2" pref="122" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -68,6 +70,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jBLedDesligar" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jB60porcento" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBSorteio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -200,6 +203,14 @@
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jB90porcentoMouseClicked"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBSorteio">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sorteio!!"/>
+      </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jBSorteioMouseClicked"/>
       </Events>
     </Component>
   </SubComponents>

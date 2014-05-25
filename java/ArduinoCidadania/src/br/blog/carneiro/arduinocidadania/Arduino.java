@@ -1,5 +1,6 @@
 package br.blog.carneiro.arduinocidadania;
 
+import java.util.Random;
 import javax.swing.JButton;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -30,7 +31,15 @@ public class Arduino {
         //ex: se o botão se chama 40%, envia 40 para o arduino
         if (StringUtils.endsWith(comando, "%")) {
             short valorAenviar = NumberUtils.toShort(StringUtils.chop(comando));
-            arduino.enviaDados(valorAenviar);
+            arduino.enviaDado(valorAenviar);
+        } else if (StringUtils.endsWith(comando, "!")) {
+            Random gerador = new Random();
+            short[] valores = {
+                (short) gerador.nextInt(101),
+                (short) gerador.nextInt(101),
+                (short) gerador.nextInt(101)};
+            
+            arduino.enviaDados(valores);
         } else {
             arduino.close();
             System.out.println(button.getText());//Imprime o nome do botão pressionado

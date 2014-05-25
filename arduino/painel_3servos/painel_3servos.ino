@@ -6,14 +6,14 @@
 const int MIN_ENTRADA = 0;
 const int MAX_ENTRADA = 100;
 const int MIN_SERVO = 5;
-const int MAX_SERVO = 179;
+const int MAX_SERVO = 175;
 
 Servo servo1;  
 Servo servo2;  
 Servo servo3;  
-int valorRecebido1 = 0; //valores vindos de fora
-int valorRecebido2 = 0; //valores vindos de fora
-int valorRecebido3 = 0; //valores vindos de fora
+int valorRecebido1 = MIN_SERVO;
+int valorRecebido2 = MIN_SERVO;
+int valorRecebido3 = MIN_SERVO;
  
 void setup() 
 { 
@@ -25,6 +25,13 @@ void setup()
  
 void loop() 
 {
+    
+  servo1.write(map(valorRecebido1, MIN_ENTRADA, MAX_ENTRADA, MAX_SERVO, MIN_SERVO));
+  servo2.write(map(valorRecebido2, MIN_ENTRADA, MAX_ENTRADA, MAX_SERVO, MIN_SERVO));
+  servo3.write(map(valorRecebido3, MIN_ENTRADA, MAX_ENTRADA, MAX_SERVO, MIN_SERVO));
+  
+  delay(100);  
+  
   while (Serial.available()) // Wait for characters
   {
       int centena = Serial.read()-48;
@@ -46,11 +53,6 @@ void loop()
       Serial.println(valorRecebido3);
       Serial.read(); //le o separador (virgula ou outro qualquer) e nao faz nada
   }
-  
-  servo1.write(map(valorRecebido1, MIN_ENTRADA, MAX_ENTRADA, MIN_SERVO, MAX_SERVO));
-  servo2.write(map(valorRecebido2, MIN_ENTRADA, MAX_ENTRADA, MIN_SERVO, MAX_SERVO));
-  servo3.write(map(valorRecebido3, MIN_ENTRADA, MAX_ENTRADA, MIN_SERVO, MAX_SERVO));  
-  
-  delay(100);  
+
 }  
 

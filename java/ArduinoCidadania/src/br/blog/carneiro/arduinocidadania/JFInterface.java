@@ -42,6 +42,7 @@ public class JFInterface extends javax.swing.JFrame {
         jB70porcento = new javax.swing.JButton();
         jB80porcento = new javax.swing.JButton();
         jB90porcento = new javax.swing.JButton();
+        jBSorteio = new javax.swing.JButton();
 
         jToggleButton1.setText("jToggleButton1");
 
@@ -138,6 +139,13 @@ public class JFInterface extends javax.swing.JFrame {
             }
         });
 
+        jBSorteio.setText("Sorteio!!");
+        jBSorteio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBSorteioMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -147,7 +155,8 @@ public class JFInterface extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jBSair))
+                        .addComponent(jBSair)
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jBLedDesligar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -163,8 +172,9 @@ public class JFInterface extends javax.swing.JFrame {
                             .addComponent(jB70porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jB80porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jB90porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(0, 240, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                        .addComponent(jBSorteio, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(34, 34, 34))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +182,8 @@ public class JFInterface extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBLedDesligar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jB60porcento))
+                    .addComponent(jB60porcento)
+                    .addComponent(jBSorteio))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jB10porcento)
@@ -252,6 +263,10 @@ public class JFInterface extends javax.swing.JFrame {
         comm.comunicacaoArduino(jB80porcento);
     }//GEN-LAST:event_jB80porcentoMouseClicked
 
+    private void jBSorteioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBSorteioMouseClicked
+        comm.comunicacaoArduino(jBSorteio);
+    }//GEN-LAST:event_jBSorteioMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -300,6 +315,7 @@ public class JFInterface extends javax.swing.JFrame {
     private javax.swing.JButton jBLedDesligar;
     private javax.swing.JButton jBLedLigar;
     private javax.swing.JButton jBSair;
+    private javax.swing.JButton jBSorteio;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
