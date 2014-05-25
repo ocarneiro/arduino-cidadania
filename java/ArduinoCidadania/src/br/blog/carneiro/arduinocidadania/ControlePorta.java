@@ -87,22 +87,16 @@ public class ControlePorta {
             int inteiro = (valorConsiderado - centena * 100 - dezena * 10);
 
             String valorString = "" + centena + dezena + inteiro;
-            //int valorFinal = centena * 100 + dezena * 10 + inteiro;
             System.out.println("Mandei: " + valorString);
-            
             serialOut.write(valorString.getBytes());
 
-            //serialOut.write((""+centena).getBytes());
-            //serialOut.write(dezena);
-            //serialOut.write(inteiro);
-            //serialOut.flush();
-
+            /*
             System.out.println ("Recebi: " + serialIn.available() + " bytes");
             while (serialIn.available()>0) {
                 System.out.print((char)serialIn.read());
             }
             System.out.println(".");
-            
+            */
 
         } catch (IOException ex) {
             JOptionPane.showMessageDialog(null, "Não foi possível enviar o dado. ",
