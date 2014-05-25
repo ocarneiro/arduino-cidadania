@@ -6,7 +6,6 @@
 Servo barbie;  
 const int LED = 13;
 int valorRecebido = 0; //valor vindo de fora
-int valorAExibir = 0;  //valor que o servo deve representar
  
 void setup() 
 { 
@@ -20,8 +19,11 @@ void loop()
   while (Serial.available()) // Wait for characters
   {
       int centena = Serial.read()-48;
+      Serial.println(centena);
       int dezena = Serial.read()-48;
+      Serial.println(dezena);
       int inteiro = Serial.read()-48;
+      Serial.println(inteiro);
       valorRecebido = centena * 100 + dezena * 10 + inteiro;
       Serial.println(valorRecebido);
   }

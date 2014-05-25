@@ -22,11 +22,11 @@ public class Arduino {
    */
   public void comunicacaoArduino(JButton button) {        
     if("Acender".equals(button.getActionCommand())){
-      arduino.enviaDados(1);
+      arduino.enviaDados((short)100);
       System.out.println(button.getText());//Imprime o nome do botão pressionado
     }
     else if("Apagar".equals(button.getActionCommand())){
-      arduino.enviaDados(2);
+      arduino.enviaDados((short)0);
       System.out.println(button.getText());
     }
     else{
