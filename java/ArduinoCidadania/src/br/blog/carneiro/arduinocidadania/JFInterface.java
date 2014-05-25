@@ -29,13 +29,25 @@ public class JFInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jToggleButton1 = new javax.swing.JToggleButton();
         jBLedLigar = new javax.swing.JButton();
         jBLedDesligar = new javax.swing.JButton();
         jBSair = new javax.swing.JButton();
+        jB10porcento = new javax.swing.JButton();
+        jB20porcento = new javax.swing.JButton();
+        jB30porcento = new javax.swing.JButton();
+        jB40porcento = new javax.swing.JButton();
+        jB50porcento = new javax.swing.JButton();
+        jB60porcento = new javax.swing.JButton();
+        jB70porcento = new javax.swing.JButton();
+        jB80porcento = new javax.swing.JButton();
+        jB90porcento = new javax.swing.JButton();
+
+        jToggleButton1.setText("jToggleButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jBLedLigar.setText("Acender");
+        jBLedLigar.setText("100%");
         jBLedLigar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jBLedLigarMouseClicked(evt);
@@ -47,7 +59,9 @@ public class JFInterface extends javax.swing.JFrame {
             }
         });
 
-        jBLedDesligar.setText("Apagar");
+        jBLedDesligar.setText("0%");
+        jBLedDesligar.setMaximumSize(new java.awt.Dimension(61, 23));
+        jBLedDesligar.setMinimumSize(new java.awt.Dimension(61, 23));
         jBLedDesligar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jBLedDesligarMouseClicked(evt);
@@ -61,32 +75,125 @@ public class JFInterface extends javax.swing.JFrame {
             }
         });
 
+        jB10porcento.setText("10%");
+        jB10porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB10porcentoMouseClicked(evt);
+            }
+        });
+
+        jB20porcento.setText("20%");
+        jB20porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB20porcentoMouseClicked(evt);
+            }
+        });
+
+        jB30porcento.setText("30%");
+        jB30porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB30porcentoMouseClicked(evt);
+            }
+        });
+
+        jB40porcento.setText("40%");
+        jB40porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB40porcentoMouseClicked(evt);
+            }
+        });
+
+        jB50porcento.setText("50%");
+        jB50porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB50porcentoMouseClicked(evt);
+            }
+        });
+
+        jB60porcento.setText("60%");
+        jB60porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB60porcentoMouseClicked(evt);
+            }
+        });
+
+        jB70porcento.setText("70%");
+        jB70porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB70porcentoMouseClicked(evt);
+            }
+        });
+
+        jB80porcento.setText("80%");
+        jB80porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB80porcentoMouseClicked(evt);
+            }
+        });
+
+        jB90porcento.setText("90%");
+        jB90porcento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jB90porcentoMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jBLedLigar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jBLedDesligar))
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jBSair))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(126, 126, 126)
-                        .addComponent(jBSair)))
-                .addContainerGap(175, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jBLedDesligar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jB10porcento, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE)
+                            .addComponent(jB20porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jB30porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jB40porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jB50porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jBLedLigar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jB60porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jB70porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jB80porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jB90porcento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 240, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBLedLigar)
-                    .addComponent(jBLedDesligar))
-                .addGap(18, 18, 18)
+                    .addComponent(jBLedDesligar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jB60porcento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jB10porcento)
+                    .addComponent(jB70porcento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jB20porcento)
+                    .addComponent(jB80porcento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jB30porcento)
+                    .addComponent(jB90porcento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jB40porcento)
+                    .addComponent(jBLedLigar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jB50porcento)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(jBSair)
-                .addContainerGap(189, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -108,6 +215,42 @@ public class JFInterface extends javax.swing.JFrame {
         comm.comunicacaoArduino(jBSair);
         System.exit(0);
     }//GEN-LAST:event_jBSairMouseClicked
+
+    private void jB10porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB10porcentoMouseClicked
+        comm.comunicacaoArduino(jB10porcento);
+    }//GEN-LAST:event_jB10porcentoMouseClicked
+
+    private void jB20porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB20porcentoMouseClicked
+        comm.comunicacaoArduino(jB20porcento);
+    }//GEN-LAST:event_jB20porcentoMouseClicked
+
+    private void jB30porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB30porcentoMouseClicked
+        comm.comunicacaoArduino(jB30porcento);
+    }//GEN-LAST:event_jB30porcentoMouseClicked
+
+    private void jB50porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB50porcentoMouseClicked
+        comm.comunicacaoArduino(jB50porcento);
+    }//GEN-LAST:event_jB50porcentoMouseClicked
+
+    private void jB40porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB40porcentoMouseClicked
+        comm.comunicacaoArduino(jB40porcento);
+    }//GEN-LAST:event_jB40porcentoMouseClicked
+
+    private void jB60porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB60porcentoMouseClicked
+        comm.comunicacaoArduino(jB60porcento);
+    }//GEN-LAST:event_jB60porcentoMouseClicked
+
+    private void jB70porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB70porcentoMouseClicked
+        comm.comunicacaoArduino(jB70porcento);
+    }//GEN-LAST:event_jB70porcentoMouseClicked
+
+    private void jB90porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB90porcentoMouseClicked
+        comm.comunicacaoArduino(jB90porcento);
+    }//GEN-LAST:event_jB90porcentoMouseClicked
+
+    private void jB80porcentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jB80porcentoMouseClicked
+        comm.comunicacaoArduino(jB80porcento);
+    }//GEN-LAST:event_jB80porcentoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -145,8 +288,18 @@ public class JFInterface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jB10porcento;
+    private javax.swing.JButton jB20porcento;
+    private javax.swing.JButton jB30porcento;
+    private javax.swing.JButton jB40porcento;
+    private javax.swing.JButton jB50porcento;
+    private javax.swing.JButton jB60porcento;
+    private javax.swing.JButton jB70porcento;
+    private javax.swing.JButton jB80porcento;
+    private javax.swing.JButton jB90porcento;
     private javax.swing.JButton jBLedDesligar;
     private javax.swing.JButton jBLedLigar;
     private javax.swing.JButton jBSair;
+    private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }
